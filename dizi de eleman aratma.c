@@ -1,28 +1,28 @@
 #include <stdio.h>
-#include <stdbool.h> // true/false mantığını kullanabilmek için ekliyoruz
+#include <stdbool.h> // true/false mantÄ±ÄŸÄ±nÄ± kullanabilmek iÃ§in ekliyoruz
 
 int main() {
-    // 1. Adım: Diziyi tanımla
+    // 1. AdÄ±m: Diziyi tanÄ±mla
     int dizi[] = {1, 2, 5, 0, 8, 10};
 
-    // Aradığımız sayıyı belirliyoruz (Tahtada 8 işaretlenmiş)
+    // AradÄ±ÄŸÄ±mÄ±z sayÄ±yÄ± belirliyoruz 
     int aranan = 9;
 
-    // Dizinin kaç elemanlı olduğunu buluyoruz
+   
     int boyut = sizeof(dizi) / sizeof(dizi[0]);
 
-    // Başlangıçta sayıyı bulamadığımızı varsayıyoruz
+   
     bool bulundu = false;
 
-    // 2. Adım: Dizinin içinde dönerek sayıyı ara
+    // 2. AdÄ±m: Dizinin iÃ§inde dÃ¶nerek sayÄ±yÄ± ara
     for (int i = 0; i < boyut; i++) {
         if (dizi[i] == aranan) {
-            bulundu = true; // Sayıyı bulursak durumu "true" yapıyoruz
-            break; // Bulduğumuz için aramaya devam etmeye gerek yok, döngüden çıkıyoruz
+            bulundu = true; // SayÄ±yÄ± bulursak durumu "true" yapÄ±yoruz
+            break; // BulduÄŸumuz iÃ§in aramaya devam etmeye gerek yok, dÃ¶ngÃ¼den Ã§Ä±kÄ±yoruz
         }
     }
 
-    // 3. Adım: Sonucu ekrana yazdır (varsa true, yoksa false)
+    // 3. AdÄ±m: Sonucu ekrana yazdÄ±r (varsa true, yoksa false)
     if (bulundu) {
         printf("true\n");
     } else {
